@@ -9,13 +9,14 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin(origins = "*")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
     // Endpoint to create or update a user
-    @PostMapping
+    @PostMapping("/save")
     public User createUser(@RequestBody User user) {
         return userService.saveUser(user);
     }

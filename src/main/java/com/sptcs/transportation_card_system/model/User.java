@@ -23,7 +23,7 @@ public class User {
     private int userType;
     @Column(nullable = false)
     private String address;
-    @Column(name = "created_on", updatable = false)
+    @Column(name = "created_on", updatable = false, nullable = false)
     private LocalDateTime createdOn;
     @PrePersist
     public void onCreate() {
